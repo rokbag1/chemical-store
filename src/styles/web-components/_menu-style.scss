@@ -1,0 +1,22 @@
+.menu {
+  width: 4vw;
+  height: 100%;
+  background-color: $menu-color;
+  display: inline-flex;
+  align-items: center;
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    cursor: pointer;
+
+    img {
+        fill: $svg-color;
+        width: 50px;
+      } 
+  }
+}

@@ -1,0 +1,71 @@
+.header {
+  background-color: $header-background;
+  display: flex;
+  justify-content: space-around;
+  padding: 80px;
+  flex: auto;
+  height: fit-content;
+
+  .element {
+    .element-container {
+      width: 380px;
+      height: 380px;
+      background-color: $text-color;
+      border: 3px solid $menu-color;
+      padding: 8px 16px;
+      display: grid;
+
+      .el-header {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          font-size: 52px;
+          color: $menu-color;
+          font-weight: bold;
+        }
+
+        h5 {
+          font-size: 42px;
+          color: $menu-color;
+          font-weight: 500;
+        }
+      }
+
+      .el-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+          font-size: 172px;
+        }
+      }
+
+      .el-footer {
+        display: flex;
+        align-items: flex-end;
+
+        h5 {
+          font-size: 42px;
+          color: $menu-color;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .text {
+      text-align: center;
+
+    .title {
+      font-size: 136px;
+      font-weight: bold;
+    }
+
+    .subtext {
+      font-size: 86px;
+      font-weight: bold;
+    }
+  }
+}
