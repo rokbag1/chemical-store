@@ -1,11 +1,16 @@
+.menu-container {
+  width: 4vw;
+}
+
 .menu {
   width: 4vw;
   height: 100%;
   background-color: $menu-color;
   display: inline-flex;
   align-items: center;
+  position: fixed;
 
-  .menu-container {
+  .menu-items {
     display: flex;
     flex-direction: column;
     justify-content: space-around;

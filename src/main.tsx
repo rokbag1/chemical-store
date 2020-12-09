@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/main.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import MainPage from "./components/main-page/main-page";
-import MendeleevTable from "./components/mendeleev-table/main-table";
-import Menu from "./components/main-page/menu";
+import Menu, { Links } from "./components/main-page/menu";
+import Body from "./components/main-page/body";
+import Header from "./components/main-page/header";
+import Footer from "./components/main-page/footer";
 
 function Main() {
+  const [link, setLink] = useState(Links.Flask);
+
   return (
-    <Router>
-      <div className="main">
-        <Menu />
-        <Route path="/" exact component={MainPage} />
-        <Route path="/mendeleev" component={MendeleevTable} />
+    <div className="main">
+      <Menu
+        onMenuClick={(link) => {
+          setLink(link);
+        }}
+      />
+      <div className="content">
+        <Header />
+        <Body
+          setToInitial={() => {
+            setLink(Links.Initial);
+          }}
+          link={link}
+        />
+        <Footer />
       </div>
-    </Router>
+    </div>
   );
 }
 
