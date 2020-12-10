@@ -1,0 +1,98 @@
+.mendeleev-table {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 5px;
+  padding: 16px 32px;
+  
+  .mendeleev-options {
+    grid-column-start: 3;
+    grid-column-end: 17;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      cursor: pointer;
+      height: fit-content;
+      margin: 0 16px;
+    }
+  }
+
+  .chemical-element {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    width: 90px;
+    height: 90px;
+    font-size: 0.7vw;
+    transition: opacity 0.1s ease-in;
+    cursor: pointer;
+
+    .top {
+      font-size: 0.5vw;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .middle {
+      height: max-content;
+      font-size: 2vw;
+      height: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bottom {
+      font-size: 0.6vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .gap {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 50%;
+      height: calc(200% + 5px * 2 - 4px);
+      border-width: 0 0 2px 2px;
+      border-style: solid;
+      margin-left: -1px;
+      color: #fff;
+      opacity: 0.2;
+    }
+  }
+
+  .chemical-numbers {
+    color: $chenumberes-color;
+    border: 1px solid $chenumberes-color;
+    text-shadow: 0 0 0.4vw $chenumberes-color;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    width: 90px;
+    height: 90px;
+  
+    .middle {
+      height: max-content;
+      font-size: 1vw;
+      height: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .element-disabled {
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,46 @@
+.about-myself {
+    display: flex;
+    background-color: $about-myself-color;
+
+    h2 {
+        margin-bottom: 32px;
+    }
+
+    .text {
+        max-width: 1000px;
+        width: 100%;
+
+        .about-page-text {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+    
+        .social-icons {
+            margin-top: 16px;
+            display: flex;
+
+            div {
+                margin-right: 16px;
+
+                svg {
+                    width: 50px;
+                }
+            }
+        }
+
+        .projects {
+            width: 100%;
+            margin-top: 16px;
+
+            i {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .image {
+        max-width: 350px;
+        width: 100%;
+    }
+}
