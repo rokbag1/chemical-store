@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import roundTo from "round-to";
+import { Links } from "../main-page/menu";
 
 const api = axios.create({
   headers: { "Access-Control-Allow-Origin": "*" },
   baseURL: "http://localhost:3000/get-all-elements",
 });
-
-interface Element {
+interface Props {
+  setItem : React.Dispatch<React.SetStateAction<string>>;
+}
+export interface chElement {
   id: string;
   name: string;
   atomic_mass: string;
@@ -19,6 +22,7 @@ interface Element {
   melt?: string;
   row?: string;
   column?: string;
+  shell?: Array<number>;
 }
 
 function activateGroup(
@@ -33,7 +37,7 @@ function activateGroup(
   }
 }
 
-export const MendeleevTable = (): JSX.Element => {
+export const MendeleevTable = (props: Props): JSX.Element => {
   const [chemicalElements, setElement] = useState([]);
   useEffect(() => {
     api.get("/").then((res) => {
@@ -74,9 +78,10 @@ export const MendeleevTable = (): JSX.Element => {
           ))}
         </div>
         {chemicalElements != null
-          ? chemicalElements.map((element: Element, key) => (
+          ? chemicalElements.map((element: chElement, key) => (
               <div
                 key={element.id}
+                onClick={() => props.setItem(element.id)}
                 className={`chemical-element ${element.category} ${
                   element.row
                 } ${element.column} ${

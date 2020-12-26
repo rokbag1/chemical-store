@@ -2,6 +2,7 @@
 @import "./web-components/helpers/classes.scss";
 
 @import "./web-components/mendeleev-table/element.scss";
+@import "./web-components/mendeleev-table/element-description.scss";
 
 @import "./web-components/menu-style";
 @import "./web-components/header";
@@ -9,6 +10,9 @@
 @import "./web-components/body";
 @import "./web-components/content";
 @import "./web-components/about-myself";
+
+@import "../components/helpers/atom/atom.scss";
+
 
 @font-face {
   font-family: 'Fredoka';
@@ -51,4 +55,16 @@ h5 {
 
 .border-none {
   border: none!important;
+}
+
+.stop1 {
+  background-color: #00ddfd;
+  stop-color:#00ddfd;
+  stop-opacity: 1;
+}
+
+.stop2 {
+  stop-color:#2d6a82;
+  background-color: #2d6a82;
+  stop-opacity:1;
 }

@@ -21,6 +21,13 @@
     }
   }
 
+  .chemical-element:not(.element-disabled) {
+    &:hover {
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+  }
+
   .chemical-element {
     display: flex;
     flex-direction: column;
@@ -28,8 +35,9 @@
     width: 90px;
     height: 90px;
     font-size: 0.7vw;
+    background-color: black;
     transition: opacity 0.1s ease-in;
-    cursor: pointer;
+    transition: transform 0.1 ease-in;
 
     .top {
       font-size: 0.5vw;

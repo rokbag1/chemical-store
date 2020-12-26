@@ -19,60 +19,100 @@
   color: $non-metal-color;
   border: 1px solid $non-metal-color;
   text-shadow: 0 0 0.4vw $non-metal-color;
+
+  .atom {
+    background-color: $non-metal-color;
+  }
 }
 
 .alkali-metal {
   color: $alkali-metal-color;
   border: 1px solid $alkali-metal-color;
   text-shadow: 0 0 0.4vw $alkali-metal-color;
+
+  .atom {
+    background-color: $alkali-metal-color;
+  }
 }
 
 .alkaline-earth-metal {
   color: $alkaline-earth-metal;
   border: 1px solid $alkaline-earth-metal;
   text-shadow: 0 0 0.4vw $alkaline-earth-metal;
+
+  .atom {
+    background-color: $alkaline-earth-metal;
+  }
 }
 
 .transition-metal {
   color: $transition-metal-color;
   border: 1px solid $transition-metal-color;
   text-shadow: 0 0 0.4vw $transition-metal-color;
+
+  .atom {
+    background-color: $transition-metal-color;
+  }
 }
 
 .post-transition-metal {
   color: $post-transition-metal-color;
   border: 1px solid $post-transition-metal-color;
   text-shadow: 0 0 0.4vw $post-transition-metal-color;
+
+  .atom {
+    background-color: $post-transition-metal-color;
+  }
 }
 
 .metalloid {
   color: $metaloid-color;
   border: 1px solid $metaloid-color;
   text-shadow: 0 0 0.4vw $metaloid-color;
+  
+  .atom {
+    background-color: $metaloid-color;
+  }
 }
 
 .noble-gas {
   color: $noble-gas-color;
   border: 1px solid $noble-gas-color;
   text-shadow: 0 0 0.4vw $noble-gas-color;
+  
+  .atom {
+    background-color:$noble-gas-color;
+  }
 }
 
 .actinide {
   color: $actinide-color;
   border: 1px solid $actinide-color;
   text-shadow: 0 0 0.4vw $actinide-color;
+
+  .atom {
+    background-color: $actinide-color;
+  }
 }
 
 .unknown {
   color: $unknown-color;
   border: 1px solid $unknown-color;
   text-shadow: 0 0 0.4vw $unknown-color;
+
+  .atom {
+    background-color: $unknown-color;
+  }
 }
 
 .lanthanide {
   color: $lanthanide-color;
   border: 1px solid $lanthanide-color;
   text-shadow: 0 0 0.4vw $lanthanide-color;
+
+  .atom {
+    background-color: $lanthanide-color;
+  }
 }
 
 @for $i from 1 through 10 {
@@ -87,8 +127,9 @@
   }
 }
 .content-block {
-  padding-top: 52px;
+  padding: 72px 0;
   font-family: 'Fredoka';
+  border-bottom: 4px solid #FCE373;
 
   .content-block-title {
     width: 100%;

@@ -27,11 +27,11 @@ function Menu(props: Props) {
       <div className="menu">
         <div className="menu-items">
           <img onClick={ () => props.onMenuClick(Links.Flask)} src={Flask} alt="flask" />
-          <img onClick={ () => props.onMenuClick(Links.Friend)} src={Friend} alt="friend" />
           <img onClick={ () => props.onMenuClick(Links.Research)} src={Research} alt="research" />
           <img onClick={ () => props.onMenuClick(Links.Scientist)} src={Scientist} alt="scientist" />
           <img onClick={ () => props.onMenuClick(Links.Search)} src={Search} alt="search" />
           <img onClick={ () => props.onMenuClick(Links.AboutMyself)} src={Hero} alt="hero" />
+          <img onClick={ () => props.onMenuClick(Links.Friend)} src={Friend} alt="friend" />
         </div>
       </div>
     </div>

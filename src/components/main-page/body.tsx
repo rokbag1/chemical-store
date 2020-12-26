@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Astronaut from "../../styles/images/menu-images/astronaut.svg";
 import Heart from "../../styles/images/menu-images/heart.svg";
 import AboutMyself from "./about-myself";
 import { Links } from "./menu";
 import { link } from "fs";
 import { MendeleevTable } from "../mendeleev-table/main-table";
+import ElementDescription from "../mendeleev-table/element-description";
 
 interface Props {
   link: Links;
@@ -20,14 +21,30 @@ function scrolltoMenu(link: Links, ref: HTMLDivElement | null): void {
 }
 
 function Body(props: Props) {
-  const aboutMyselfRef = useRef<HTMLDivElement>(null);
+  const [item, setItem] = useState("");
+  const [chElement, setChElement] = useState('');
+  const MendeleevTableRef = useRef<HTMLDivElement>(null);
+  const ElementDescriptionRefs = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (props.link === Links.Initial) {
       return;
     }
-    scrolltoMenu(props.link, aboutMyselfRef.current);
+
+    if( props.link === Links.Flask) {
+      scrolltoMenu(props.link, MendeleevTableRef.current);
+    }
+
+    if( props.link === Links.Research) {
+      scrolltoMenu(props.link, ElementDescriptionRefs.current);
+    }
+    
     props.setToInitial();
   }, [props.link]);
+
+  useEffect(() => {
+    scrolltoMenu(Links.Research, ElementDescriptionRefs.current);
+  }, [item]);
 
   return (
     <div>
@@ -41,11 +58,11 @@ function Body(props: Props) {
           <img alt="" src={Heart} />
         </div>
       </div>
-      <div ref={aboutMyselfRef}>
-        <AboutMyself />
+      <div ref={MendeleevTableRef}>
+        <MendeleevTable setItem={setItem}/>
       </div>
-      <div ref={aboutMyselfRef}>
-        <MendeleevTable />
+      <div ref={ElementDescriptionRefs}>
+        <ElementDescription chItem={item}/>
       </div>
     </div>
   );
