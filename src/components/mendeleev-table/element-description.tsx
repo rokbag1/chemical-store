@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useRef, useEffect, useState } from "react";
 import roundTo from "round-to";
 import Atom from "../helpers/atom/atom";
+import Experiments from "./experiments";
 import { chElement } from "./main-table";
 
 interface Props {
@@ -114,6 +115,9 @@ export const ElementDescription = (props: Props): JSX.Element => {
         ) : (
           ""
         )}
+      </div>
+      <div>
+        {chElement && cat ?<Experiments chSymbol={chElement?.symbol} category={cat} /> :''}
       </div>
     </div>
   );
