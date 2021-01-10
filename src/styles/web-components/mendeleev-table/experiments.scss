@@ -1,0 +1,60 @@
+.experiments {
+    display: flex;
+    margin: 0 32px;   
+    justify-content: space-between;
+
+    .experiment {
+        height: 550px;
+        width: 550px;
+        border-width: 1px;
+        display: flex;
+        flex-direction: column;
+
+        .experiment-title {
+            font-size: 24px;
+            padding: 16px 0 4px 0;
+            text-align: center;
+            text-shadow: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .experiment-container {
+            padding: 16px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-shadow: none;
+
+            .experiment-video {
+                width: 100%;
+                height: 100%;
+            }
+
+            .description {
+                margin-top: 8px;
+                justify-content: space-between;
+                display: flex;
+            
+                .text {
+                    .products {
+                        display: inline-block;
+                    }
+                }
+
+                .level {
+                    &.easy {
+                        color: #3aefb6;
+                    }
+                    &.medium {
+                        color: #dee955;
+                    }
+                    &.hard {
+                        color: #fd8572;
+                    }
+                }
+            }
+        }
+    }
+}
